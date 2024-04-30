@@ -1,0 +1,18 @@
+quarkus:
+  http:
+    port: 8882
+  datasource:
+    db-kind: postgresql
+    username: evento
+    password: evento
+    jdbc:
+      max-size: 16
+      url: jdbc:postgresql://localhost:5431/evento
+  hibernate-orm:
+    database:
+      generation: update
+    dialect: org.hibernate.dialect.PostgreSQL10Dialect
+  flyway:
+    clean-at-start: true
+    migrate-at-start: true
+    locations: db/migration
